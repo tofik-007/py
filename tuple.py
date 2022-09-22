@@ -1,12 +1,27 @@
-tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )
-tinytuple = (123, 'john')
-# tuple[2] = 546  it doesn't support item assignment
-# print(tuple.append("james")) don't support append
-print (tuple)          # Prints the complete tuple
-# print (tuple[0])       # Prints first element of the tuple
-# print (tuple[1:3])     # Prints elements of the tuple starting from 2nd till 3rd 
-# print (tuple[2:])      # Prints elements of the tuple starting from 3rd element
-# print (tinytuple * 2)  # Prints the contents of the tuple twice
-# print (tuple + tinytuple) 
-# print(tuple[::-1]) 
-# it is read only values can't be updated
+print("tuple's basic : ")
+# here i use list to tuple conversion bcoz i find it easy. list to tuple
+list = []
+
+# number of elements as input
+n = int(input("Enter number of elements for tuple : "))
+
+# iterating till the range
+for i in range(0, n):
+    ele = input("enter the elements of tuple :")
+    list.append(ele)  # adding the element
+
+tuple = tuple(list)   #list = list(tuple)
+print("Tuple : ", tuple)
+
+index = int(input("enter an index number to get it value : "))
+print("value of index number '",index,"' is : ",tuple[index])  # access value
+# tuples r immutable
+print("tuple has following methods : ")
+print("cmp() does not work in python 3")
+print("length of tuple is : ", len(tuple))
+print("max of tuple is : ", max(tuple))
+print("min of tuple is : ", min(tuple))
+#del tuple
+print("before deleting tuple : ", tuple)
+del tuple
+print("after delete tuple ", tuple)
